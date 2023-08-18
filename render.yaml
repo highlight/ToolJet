@@ -14,9 +14,9 @@ services:
           name: postgres-preview
           property: connectionString
       - key: TOOLJET_DB
-        value: 'tooljet_db'
+        value: "tooljet_db"
       - key: ENABLE_TOOLJET_DB
-        value: 'true'
+        value: "true"
       - key: TOOLJET_HOST
         fromService:
           type: web
@@ -29,7 +29,6 @@ services:
           envVarKey: RENDER_EXTERNAL_URL
       - key: PORT
         value: 80
-      - fromGroup: tooljet-preview-env
   - type: web
     name: PostgREST
     env: docker
@@ -44,7 +43,7 @@ services:
           name: postgres-preview
           property: connectionString
       - key: PGRST_LOG_LEVEL
-        value: 'info'
+        value: "info"
 databases:
   - name: postgres-preview
     plan: starter
